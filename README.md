@@ -1,5 +1,9 @@
 # AngularTourOfHeroes
 
+Tutorial de Tour of Heroes (spring.io/start), utilizado en la asignatura de Programación de Servicios y Procesos de 2º curso de DAM (Desarrollo de Aplicaciones Multiplataforma). 
+
+### Details
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.0.
 
 ## Development server
