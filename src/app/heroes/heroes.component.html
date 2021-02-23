@@ -1,11 +1,14 @@
-<div class="float-left-inline">
-  <h2>My Heroes</h2>
-  <ul class="heroes">
-    <li *ngFor="let hero of heroes">
-      <a routerLink="/detail/{{hero.id}}">
-        <span class="badge">{{hero.id}}</span> {{hero.name}}
-      </a>
-    </li>
-  </ul>
+<div class="jumbotron">
+  <h1>List of heroes</h1>
+  <div class="container-full-bg">
+
+    <ul class="heroes">
+      <li *ngFor="let hero of heroes">
+
+        <button type="button" class="btn btn-primary" routerLink="/detail/{{hero.id}}">
+          <span class="badge badge-light">{{hero.id}}</span> {{hero.name}}</button>
+      </li>
+    </ul>
+
+  </div>
 </div>
-<!--<app-hero-detail class="float-left-inline" [hero]="selectedHero"></app-hero-detail>-->
