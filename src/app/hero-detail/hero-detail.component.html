@@ -1,17 +1,19 @@
 <div class="jumbotron">
-  <div *ngIf="hero">
-    <h1>{{hero.name}} details</h1>
+  <div class="row" *ngIf="hero">
+    <div class="col-md-12">
+      <h1>Hero details</h1>
+      <div>
+        <img class="hero-avatar" src="../../assets/cat.png">
+        <div class="form-group">
+          <span>ID: </span>{{hero.id}}
+        </div>
+        <div class="form-group">
+          <label for="name">Name: <input [(ngModel)]="hero.name" placeholder="name"/></label>
+        </div>
+      </div>
 
-    <div>
-      <div class="form-group">
-        <span>ID: </span>{{hero.id}}
-      </div>
-      <div class="form-group">
-        <label for="name">Name: <input [(ngModel)]="hero.name" placeholder="name"/></label>
-      </div>
+      <button type="button" class="btn btn-primary" (click)="goBack()">Back</button>
     </div>
-
-    <button type="button" class="btn btn-primary" (click)="goBack()">Back</button>
 
   </div>
 </div>

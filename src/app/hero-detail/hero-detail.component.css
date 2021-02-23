@@ -8,3 +8,8 @@ h1 {
   width: 100px;
   height: 45px;
 }
+
+.hero-avatar
+{
+  margin-bottom: 1em;
+}
