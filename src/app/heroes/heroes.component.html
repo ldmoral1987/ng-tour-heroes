@@ -6,7 +6,7 @@
       <li *ngFor="let hero of heroes">
 
         <button type="button" class="btn btn-primary" routerLink="/detail/{{hero.id}}">
-          <span class="badge badge-light">{{hero.id}}</span> {{hero.name}}</button>
+          <span class="badge badge-light">{{hero.payload.doc.data().id}}</span> {{hero.payload.doc.data().name}}</button>
       </li>
     </ul>
 
