@@ -15,7 +15,15 @@ ul {
 .btn-primary{
   margin: 5px;
   padding: 10px;
-  width: 200px;
+  width: 250px;
   height: 45px;
   text-align: left;
+  position: relative;
+}
+
+.hero-avatar
+{
+  position: absolute;
+  right: 0.8em;
+  top: 0.2em;
 }
