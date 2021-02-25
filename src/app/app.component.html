@@ -1,14 +1,23 @@
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-  <!-- Brand/logo -->
+  <!-- Brand -->
   <a class="navbar-brand" href="#">
     <img src="../assets/logo.png" alt="logo" style="width:40px;">
     Tour of Heroes <span class="badge badge-light">1.0</span>
   </a>
 
-  <!-- Links -->
   <ul class="navbar-nav">
     <li class="nav-item">
-      <a class="nav-link" routerLink="/heroes">Heroes</a>
+      <a class="nav-link" routerLink="/">Inicio</a>
+    </li>
+
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        Heroes
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" routerLink="/heroes">Lista de héroes</a>
+        <a class="dropdown-item" href="#">Añadir héroe</a>
+      </div>
     </li>
   </ul>
 </nav>
