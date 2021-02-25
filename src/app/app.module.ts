@@ -12,6 +12,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { environment } from "src/environments/environment";
 import { AngularFireModule } from "@angular/fire";
 import { AngularFirestoreModule } from "@angular/fire/firestore";
+import { AddHeroComponent } from './add-hero/add-hero.component';
 
 @NgModule({
   imports: [
@@ -25,7 +26,8 @@ import { AngularFirestoreModule } from "@angular/fire/firestore";
     AppComponent,
     HeroesComponent,
     HeroDetailComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    AddHeroComponent
   ],
   bootstrap: [ AppComponent ]
 })
