@@ -4,9 +4,8 @@
 
     <ul class="heroes">
       <li *ngFor="let hero of heroes">
-
-        <button type="button" class="btn btn-primary" routerLink="/detail/{{hero.id}}">
-          <span class="badge badge-light">{{hero.payload.doc.data().id}}</span> {{hero.payload.doc.data().name}}</button>
+        <button type="button" class="btn btn-primary" routerLink="/detail/{{hero.payload.doc.id}}">
+          <span class="badge badge-light">{{hero.payload.doc.id}}</span> {{hero.payload.doc.data().name}}</button>
       </li>
     </ul>
 

@@ -4,7 +4,6 @@ import { Observable, of } from "rxjs";
 import { map } from "rxjs/operators";
 
 import { Hero } from './hero';
-import { HEROES } from './mock-heroes';
 import { MessageService } from './message.service';
 
 @Injectable({ providedIn: 'root' })
@@ -30,9 +29,20 @@ export class HeroService {
     //return this.angularFirestore.collection("heroes").snapshotChanges();
   }
 
-  getHero(id: number): Observable<Hero> {
+  getHero(id: string) {
     // TODO: send the message _after_ fetching the hero
-    this.messageService.add(`HeroService: fetched hero id=${id}`);
-    return of(HEROES.find(hero => hero.id === id)) as Observable<Hero>;
+    //this.messageService.add(`HeroService: fetched hero id=${id}`);
+
+
+
+    return this.angularFirestore.collection("heroes").get();
+
+    //return this.angularFirestore.collection('heroes').doc('1').get();
+
+
+
+    //return this.angularFirestore.collection("heroes").snapshotChanges();
+
+    //return of(HEROES.find(hero => hero.id === id)) as Observable<Hero>;
   }
 }

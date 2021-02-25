@@ -5,6 +5,8 @@ import { Location } from '@angular/common';
 
 import { Hero } from '../hero';
 import { HeroService } from '../hero.service';
+import { stringify } from '@angular/compiler/src/util';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-hero-detail',
@@ -12,7 +14,7 @@ import { HeroService } from '../hero.service';
   styleUrls: [ './hero-detail.component.css' ]
 })
 export class HeroDetailComponent implements OnInit {
-  hero?: Hero;
+  hero: any;
 
   constructor(
     private route: ActivatedRoute,
@@ -27,16 +29,15 @@ export class HeroDetailComponent implements OnInit {
 
   getHero(): void {
     try {
-      const id = +<String>this.route.snapshot.paramMap.get('id');
-      this.heroService.getHero(id).subscribe(hero => this.hero = hero);
-      if (this.hero == null)
+      const id: string = this.route.snapshot.paramMap.get('id')!;
+      this.hero = this.heroService.getHero(id);
+      alert(this.hero)
+      if (!this.hero)
         this.router.navigateByUrl('/404', {skipLocationChange: true});
-    } catch (err) {
+    } catch (err)
+    {
       this.router.navigateByUrl('/404', {skipLocationChange: true});
     }
-
-
-
   }
 
   goBack(): void {
