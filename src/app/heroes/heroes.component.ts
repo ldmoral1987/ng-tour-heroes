@@ -15,8 +15,8 @@ export class HeroesComponent implements OnInit {
     this.getHeroes();
   }
 
+  // Se suscribe al servicio para obtener todos los héroes desde firestore
   getHeroes(): void {
     this.heroService.getHeroes().subscribe(res =>(this.heroes = res));
   }
-
 }
