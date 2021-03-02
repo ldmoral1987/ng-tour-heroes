@@ -2,6 +2,7 @@
   <div class="row" *ngFor="let hero of heroes">
     <div class="col-md-12" *ngIf="hero.payload.doc.id == this.id">
       <h1>Hero details</h1>
+
       <div class="text-center">
         <img class="hero-avatar" src="../../assets/avatar/{{hero.payload.doc.data().avatar}}.png">
         <div class="form-group">
