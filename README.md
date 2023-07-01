@@ -1,6 +1,6 @@
 # AngularTourOfHeroes
 
-Tutorial de Tour of Heroes (angular.io/start), utilizado en la asignatura de Programación de Servicios y Procesos de 2º curso de DAM (Desarrollo de Aplicaciones Multiplataforma). 
+Tutorial de Tour of Heroes (angular.io/start), utilizado en el módulo profesional de Programación de Servicios y Procesos de 2º curso de DAM (Desarrollo de Aplicaciones Multiplataforma). 
 
 ### Details
 
